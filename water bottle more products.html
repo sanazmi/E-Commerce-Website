@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./water bottle more products.css">
+    <title>water bottle more products</title>
+    <script src="./water bottle more products.js " defer></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="hamburger_logo">
+            <img src="./hamburger.png" alt="">
+        </div>
+        <div class="logo">
+            <a class="logo_link" href="./index.html"><span>Case.Com</span></a>
+        </div>
+        <div class="icons">
+            <div class="upper_header_right_icons_button">
+                <a href="./sign in.html" class="navlink" title="Account">
+                    <img src="./account.png" alt="">
+                </a>
+            </div>
+
+            <div class="upper_header_right_icons_button">
+                <a href="search.html" class="navlink" title="Search">
+                    <img src="./seacrh.png" alt="">
+                </a>
+            </div>
+
+            <div class="upper_header_right_icons_button">
+                <img src="./cart.png" onclick="opencart()" style="width:30px; height: 30px;">
+            </div>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="navbar_container">
+            <div class="nv3">
+                <a href="./floral blossom with holder more products.html"><span>Floral Cases</span></a>
+            </div>
+            <div class="nv1">
+                <a href="./water bottle more products.html"><span>Water Bottles</span></a>
+            </div>
+            <div class="nv2">
+                <a href="./glass case more products.html"><span>Glass Cases</span></a>
+            </div>
+
+            <!-- <div class="nv4">
+                <a href=""><span>Iphone Zone</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Iphone Cases</a>
+                    <a href="#">iWatch Bands</a>
+                    <a href="#">Airpods Cases</a>
+                </div>
+            </div> -->
+            <div class="nv5">
+                <a href="./customisable iphone more products.html"><span>Customised Iphone Cases</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="slide">
+            <img src="./bannerforwaterbottle.webp" alt="Glass Case 1">
+            <h1>Water Bottles Here</h1>
+        </div>
+    </div>
+
+    <div id="filterDiv" class="modify">
+        <div class="filter" onclick="toggleNav()">
+            <img src="./filter.png">
+            <img src="./down arrow.png" id="arrowIcon" style="transform: rotate(0deg);">
+            <p>Filter</p>
+        </div>
+        <div class="middle">
+        </div>
+
+        <div class="sort">
+            <img src="./sort.png">
+            <p>Sort By</p>
+            <div class="options">
+                <!-- <a href="#">Featured</a>
+                <a href="#">Best Selling</a>
+                <a href="#">Alphabetically, A-Z</a>
+                <a href="#">Alphabetically, Z-A</a>
+                <a href="#">Price, Low to High</a>
+                <a href="#">Price, High to Low</a>
+                <a href="#">Date, Old to New</a>
+                <a href="#">Date, New to Old</a> -->
+                <button onclick="sortProducts('price-low-to-high')">Sort by Price (Low to High)</button>
+                <button onclick="sortProducts('price-high-to-low')">Sort by Price (High to Low)</button>
+                <button onclick="sortProducts('name-a-to-z')">Sort by Alphabetically (a-z)</button>
+                <button onclick="sortProducts('name-z-to-a') ">Sort by Alphabetically (z-a)</button>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="sale-items">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()"></a>
+            <div class="availability">
+                <a href="# ">Availability</a>
+                <ul class="collection ">
+                    <li>
+                        <input type="checkbox" name="filter_availability" value="1 " id="filter-availabilty"><label for="filter-availabilty">In Stock</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="filter_unavailability" value="1" id="filter-unavailabilty"><label for="filter-unavailabilty">Out of Stock</label>
+                    </li>
+                </ul>
+            </div>
+
+            <h1>Price</h1>
+            <div class="slidecontainer">
+                <span class="multi-range">
+                    <input type="range" min="0" max="1000" value="0" id="lower">
+                    <input type="range" min="0" max="1000" value="1000" id="upper">
+                    <div class = "value-min">
+                    <p>Minimum: <span id="min"></span></p>
+            </div>
+            <div class="value-max">
+                <p>Maximum: <span id="max"></span></p>
+            </div>
+            </span>
+        </div>
+    </div>
+
+
+
+    <div class="product-grid1 ">
+        <div class="product ">
+            <img src="./Watercolor Flower.webp" alt="Product 1 ">
+            <h3>Water Bottle</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Watercolor Flower)</p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart('Stainless Steel Designer Water Bottle with Metal Straw(Watercolor Flower)', '999', './Watercolor Flower.webp')">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+            <img src="./watercolor floral.webp" alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Watercolor Floral Pattern)</p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart( 'Floral Blossom Designer Slim Case With Customised Holder', '999', './watercolor floral.webp') ">Add to Cart</button>
+        </div>
+
+
+        <div class="product ">
+            <img src="./tropical flower.webp " alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Tropical Flower)</p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart( 'Stainless Steel Designer Water Bottle with Metal Straw(Tropical Flower)', '999', './tropical flower.webp') ">Add to Cart</button>
+
+        </div>
+        <div class="product ">
+            <img src="./tropical flower.2webp.webp " alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Tropical floral)</p>
+            <span>₹998.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart( 'Stainless Steel Designer Water Bottle with Metal Straw(Tropical floral)', '998', './tropical flower.2webp.webp') ">Add to Cart</button>
+        </div>
+        <div class="product ">
+            <img src="./smiley pattern.webp " alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Smiley Pattern)</p>
+            <span>₹997.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart( 'Stainless Steel Designer Water Bottle with Metal Straw(Smiley Pattern)', '997', './smiley pattern.webp') ">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+            <img src="./rolling joints.webp " alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Rolling Joints)</p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart( 'Stainless Steel Designer Water Bottle with Metal Straw(Rolling Joints)', '999', './rolling joints.webp') ">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+            <img src="./rainforest zoo.webp " alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Rainforest Zoo) </p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart( 'Stainless Steel Designer Water Bottle with Metal Straw(Rainforest Zoo)', '999', './rainforest zoo.webp') ">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+            <img src="./purple floral.webp " alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Purple floral)</p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart('Stainless Steel Designer Water Bottle with Metal Straw(purple floral )', '999', './purple floral.webp') ">Add to Cart</button>
+
+        </div>
+
+        <div class="product ">
+            <img src="./multicolor tie die.webp " alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Multicolor Tie Die)</p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart('Stainless Steel Designer Water Bottle with Metal Straw(Multicolor Tie Die)', '999', './multicolor tie die.webp') ">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+            <img src="./love sucks.webp" alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Love Sucks)</p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart('Stainless Steel Designer Water Bottle with Metal Straw(Love Sucks)', '999', './love sucks.webp')">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+            <img src="./love blossom.webp " alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Love Blossom)</p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart('Stainless Steel Designer Water Bottle with Metal Straw(Love Blossom)', '999', './love blossom.webp') ">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+            <img src="./holographic heart.webp " alt="Product 2 ">
+            <h3>Cases</h3>
+            <p>Stainless Steel Designer Water Bottle with Metal Straw(Holographic Heart Pattern)</p>
+            <span>₹999.0</span>
+            <button class="btn addToCart" id="addToCartButton" onclick="addToCart('Stainless Steel Designer Water Bottle with Metal Straw(Holographic Heart Pattern)', '999', './holographic heart.webp') ">Add to Cart</button>
+        </div>
+    </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="content">
+            <div class="menu3">
+                <h3>Main Menu</h3>
+                <ul>
+                    <li>Designer Water Bottles</li>
+                    <li>Glass Cases</li>
+                    <li>floral Iphone Zone</li>
+                    <li>Customised iPhone Cases</li>
+                    <li>MURE By Case.com</li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>2022 © Case.com India</li>
+                    <li>Made With ❤️ In India</li>
+                    <li>Call Us @ 6305559833</li>
+                    <li>Email @ mailto:sanazmi.1980@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>The Story Behind Case.com</li>
+                    <li>Privacy Policy</li>
+                    <li>Exchange Policy</li>
+                    <li>Shipping Policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="affi">
+            <p>© Case.com Indiaa 2023</p>
+            <p>Powered by Shopify</p>
+        </div>
+    </div>
+
+    <!-- <div id="chartnav " class="addcartnav ">
+        <a href="javascript:void(0) " class="closebtn " onclick="closecart()">&times;</a>
+        <div class="add-chart ">
+            <h1>Cart</h1>
+            <div id="cartItems "></div>
+            <p>Total: Rs. <span id="cartTotal ">0.00</span></p>
+            <button class="btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div> -->
+
+
+    <div id="chartnav" class="addcartnav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closecart()">&times;</a>
+        <div class="add-chart">
+            <h1>Cart</h1>
+            <div id="cartItems"></div>
+            <div class="total">
+                <div id="cartTotalContainer"></div>
+                <!-- <div id="checkoutButtonContainer"></div> -->
+                <a href="./checkout.html">
+                    <div id="checkoutButtonContainer"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartTotal"></div>
+
+</body>
+
+</html>

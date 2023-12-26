@@ -1,0 +1,876 @@
+<!-- search.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Box</title>
+    <link rel="stylesheet" href="./search.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #searchContainer {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        #searchInput {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        
+        #searchButton {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #bfd3e9;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        #searchButton:hover {
+            background-color: #007BFF;
+        }
+        
+        #searchButton img {
+            width: 18px;
+            height: 18px;
+        }
+        
+        #searchResults {
+            margin-top: 20px;
+        }
+        
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .product img {
+            max-width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        
+        h3 {
+            margin: 0;
+        }
+        
+        p {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+        /* add to cart */
+        
+        .addcartnav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #c0c8b6ad;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .addcartnav a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #d3cac8;
+            display: block;
+            transition: 0.3s;
+            border-bottom: 2px solid #f4f2f6;
+        }
+        
+        .addcartnav a:hover {
+            color: #000000;
+        }
+        
+        .addcartnav .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .add-chart {
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        #chartnav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #e5dda8ad;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 0px;
+        }
+        
+        #chartnav a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #000;
+            display: block;
+            transition: 0.3s;
+            border-bottom: 2px solid #000;
+        }
+        
+        #chartnav a:hover {
+            color: #fff;
+        }
+        
+        #chartnav .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: #000;
+            cursor: pointer;
+        }
+        
+        #cartItems {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        #cartItems div {
+            /* display: flex; */
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        #cartItems img {
+            border-radius: 10%;
+        }
+        
+        #cartItems div p {
+            margin: 0;
+        }
+        
+        #cartTotal {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="text"] {
+            width: 150px;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        
+        button {
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button img {
+            width: 20px;
+            height: 20px;
+            margin-top: 5px;
+        }
+        
+        #checkoutBtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="hamburger_logo">
+            <img src="./hamburger.png" alt="">
+        </div>
+        <div class="logo">
+            <a class="logo_link" href="file:///D:/Projects/E-commerce-website/index.html"><span>Case.Com</span></a>
+        </div>
+        <div class="icons">
+            <div class="upper_header_right_icons_button">
+                <a href="" class="navlink" title="Account">
+                    <img src="./account.png" alt="">
+                </a>
+            </div>
+            <div class="upper_header_right_icons_button">
+                <a href="" class="navlink" title="Search">
+                    <img src="./seacrh.png" alt="">
+                </a>
+            </div>
+            <div class="upper_header_right_icons_button">
+                <img src="./cart.png" onclick="opencart()" style="width:30px; height: 30px;">
+            </div>
+        </div>
+    </div>
+    <!-- <div class="navbar">
+        <div class="navbar_container">
+            <div class="nv1">
+                <a href=""><span>Designer slim cases</span></a>
+            </div>
+            <div class="nv2">
+                <a href=""><span>Glass Cases</span></a>
+            </div>
+            <div class="nv3">
+                <a href=""><span>Liquid Silicon Cases</span></a>
+            </div>
+            <div class="nv4">
+                <a href=""><span>Iphone Zone</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Iphone Cases</a>
+                    <a href="#">iWatch Bands</a>
+                    <a href="#">Airpods Cases</a>
+                </div>
+            </div>
+            <div class="nv5">
+                <a href=""><span>Customised Iphone Cases</span></a>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search for items..." oninput="handleSearchInput()">
+        <button onclick="searchItems()" id="searchButton"><img src="./seacrh.png" alt="Search"></button>
+        <div id="guessedWord" style="color: #999;"></div>
+    </div>
+    <!-- search results -->
+    <div id="searchResults"></div>
+
+    <div id="chartnav" class="addcartnav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closecart()">&times;</a>
+        <div class="add-chart">
+            <h1>Cart</h1>
+            <div id="cartItems"></div>
+            <p>Total: Rs. <span id="cartTotal">0.00</span></p>
+            <button class="btn" onclick="checkout() ">Checkout</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="content">
+            <div class="menu3">
+                <h3>Main Menu</h3>
+                <ul>
+                    <li>Designer Water Bottles</li>
+                    <li>Glass Cases</li>
+                    <li>floral Iphone Zone</li>
+                    <li>Customised iPhone Cases</li>
+                    <li>MURE By Case.com</li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>2022 © Case.com India</li>
+                    <li>Made With ❤️ In India</li>
+                    <li>Call Us @ 6305559833</li>
+                    <li>Email @ mailto:sanazmi.1980@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>The Story Behind Case.com</li>
+                    <li>Privacy Policy</li>
+                    <li>Exchange Policy</li>
+                    <li>Shipping Policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="affi">
+            <p>© Case.com Indiaa 2023</p>
+            <p>Powered by Shopify</p>
+
+        </div>
+
+
+        <div id="chartnav" class="addcartnav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closecart()">&times;</a>
+            <div class="add-chart">
+                <h1>Cart</h1>
+                <div id="cartItems"></div>
+                <div class="total">
+                    <div id="cartTotalContainer"></div>
+                    <div id="checkoutButtonContainer"></div>
+                </div>
+            </div>
+        </div>
+        <div id="cartTotal"></div>
+
+</body>
+
+
+<script>
+    // cart
+    function opencart() {
+        document.getElementById("chartnav").style.width = "400px";
+    }
+
+    function closecart() {
+        document.getElementById("chartnav").style.width = "0";
+    }
+
+    function saveCartToLocalStorage() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function loadCartFromLocalStorage() {
+        var savedCart = localStorage.getItem('cart');
+        if (savedCart) {
+            cart = JSON.parse(savedCart);
+            updateCartDisplay();
+        }
+    }
+
+    loadCartFromLocalStorage();
+
+
+    function clearCartAndLocalStorage() {
+        cart = [];
+        updateCartDisplay();
+        localStorage.removeItem('cart');
+    }
+
+    var cart = [];
+
+    function addToCart(productName, price, imageUrl) {
+        console.log('addToCart called');
+        var existingItem = cart.find(item => item.name === productName);
+
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            var item = {
+                name: productName,
+                price: parseFloat(price),
+                quantity: 1,
+                gift: false,
+                letter: '',
+                image: imageUrl
+            };
+            cart.push(item);
+        }
+
+        updateCartDisplay();
+        updateAddToCartButtonText();
+        saveCartToLocalStorage();
+    }
+
+    function updateAddToCartButtonText() {
+        var addToCartButton = document.getElementById('addToCartButton');
+
+        if (cart.length > 0) {
+            var totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+
+            addToCartButton.innerHTML = `
+            <button style="width:50px;height:50px;background-color:white" onclick="decreaseQuantityInCart()">-</button>
+            <span>${totalQuantity}</span>
+            <button style="width:5px;height:5px;background-color:white" onclick="increaseQuantityInCart()">+</button>
+        `;
+        } else {
+            addToCartButton.textContent = 'Add to Cart';
+        }
+    }
+
+    function updateCartDisplay() {
+        var cartItems = document.getElementById('cartItems');
+        var cartTotalContainer = document.getElementById('cartTotalContainer');
+        var checkoutButtonContainer = document.getElementById('checkoutButtonContainer');
+        var total = 0;
+
+        cartItems.innerHTML = '';
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<p style="margin: 30px; font-size: x-large">No items in the cart.</p>';
+            checkoutButtonContainer.style.display = 'none';
+            cartTotalContainer.innerHTML = '';
+        } else {
+            cart.forEach((item, index) => {
+                        var listItem = document.createElement('div');
+                        listItem.innerHTML = `
+                <div class="pur-details">
+                    <img src="${item.image}" alt="${item.name}" style="width: 150px; height: 150px; margin-right: 10px;">
+                    <div class="item-price">
+                        <p>${item.name}</p>
+                        <p>Price: Rs. ${item.price.toFixed(2)}</p>
+                        <p>Quantity: 
+                            <button onclick="decreaseQuantity(${index})">-</button>
+                            ${item.quantity}
+                            <button onclick="increaseQuantity(${index})">+</button>
+                        </p>
+                    </div>
+                </div>
+                <div class="gift">
+                    <label><input type="checkbox" id="checkbox" onclick="toggleGift(${index})"> Gift</label>
+                    ${item.gift ? `<input type="text" placeholder="Add a letter" id="txt" onchange="updateLetter(${index}, this.value)">` : ''}
+                    <button onclick="removeFromCart(${index})"><img src="./remove.png" style="width:30px;height:30px;"></button>
+                </div>
+            `;
+            cartItems.appendChild(listItem);
+
+            total += item.price * item.quantity;
+        });
+
+        var cartTotal = document.createElement('div');
+        cartTotal.innerHTML = `Total: Rs. ${total.toFixed(2)}`;
+        cartTotalContainer.innerHTML = '';
+        cartTotalContainer.appendChild(cartTotal);
+
+        var checkoutButton = document.createElement('button');
+        checkoutButton.textContent = 'Checkout';
+        checkoutButton.onclick = checkout;
+        checkoutButtonContainer.innerHTML = '';
+        checkoutButtonContainer.appendChild(checkoutButton);
+        checkoutButtonContainer.style.display = 'block';
+
+        var totalAllProducts = document.getElementById('cartTotal');
+    totalAllProducts.innerHTML = `Total: Rs. ${total.toFixed(2)}`;
+
+        saveCartToLocalStorage(); 
+    }
+   
+}
+
+
+function toggleGift(index) {
+    cart[index].gift = !cart[index].gift;
+    updateCartDisplay();
+}
+
+function updateLetter(index, letter) {
+    cart[index].letter = letter;
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartDisplay();
+}
+
+function checkout() {
+    console.log('Checkout:', cart);
+    cart = [];
+    updateCartDisplay();
+}
+
+function increaseQuantity(index) {
+    cart[index].quantity++;
+    updateCartDisplay();
+}
+
+function decreaseQuantity(index) {
+    if (cart[index].quantity > 1) {
+        cart[index].quantity--;
+    }
+    updateCartDisplay();
+}
+
+var cartTotalContainer = document.createElement('div');
+cartTotalContainer.id = 'cartTotalContainer';
+document.querySelector('.add-chart').appendChild(cartTotalContainer);
+
+var checkoutButtonContainer = document.createElement('div');
+checkoutButtonContainer.id = 'checkoutButtonContainer';
+document.querySelector('.add-chart').appendChild(checkoutButtonContainer);
+
+updateCartDisplay();
+
+
+
+
+
+
+    // searching input 
+    const dictionary = [
+        "Watercolor Flower",
+        "Watercolor Floral Pattern",
+        "Tropical Flower",
+        "Smiley pattern",
+        "Rolling Joints",
+        "Rainforest Zoo",
+        "Purple Floral",
+        "Multicolor tie die",
+        "Love Sucks",
+        "Love Blossom",
+        "HoloGraphic heart",
+        "Floral Blossom",
+        "Bright Flower",
+        "Wild Flower",
+        "Floral family",
+        "Bright Floral",
+        "Sunflower",
+        "Spring Blossom",
+        "Shades of Pink",
+        "Pink and Peach",
+        "Floral Illustration",
+        "Designer floral",
+        "Baby Flower",
+        "Growth",
+        " Do Whatever You want!",
+        "Bright Floral",
+        "Good Vibes",
+        "Fruit Pinch",
+        "Puffy Love",
+        "peeping dog",
+        "Realistic watercolor",
+        "I'm Okay , Cute Dog",
+        "Hello! there",
+        "Doodle It Out",
+        "Cute Puppy",
+        "Rolling Joints Desingner Glass Case",
+        "Still Growing Designer Glass Case ",
+        "Karma ",
+        "Hardwork",
+        "FLoral doodle Designs",
+        "Cute dog with a ballon",
+        "Cute Cat Designer Glass Case",
+        "Cute Corgi Design Glass Case",
+        "Rainbow Smily Glass Case",
+        "Nothing Changes Aesthetic Girl",
+        "Good Things Are Coming Glass case",
+        "Focus on Good Glass case",
+        "Gemma-Star Chain Bracelet",
+        "Lala-layered chain",
+        "Rebeca-Star Charm Chain Bracelet",
+        "Leelie-Star Pendant Necklace ",
+        "Brielle - Sterling silver pendant necklace",
+        "Love - Sterling silver pendant necklace",
+        "Courtney-Sterling silver pendant necklace",
+        "Octavia-FLower pendant necklace"
+    ];
+
+    function spellCheckAsYouType(input) {
+        const matchingWords = dictionary.filter(word =>
+            word.toLowerCase().startsWith(input.toLowerCase())
+        );
+        return matchingWords.length > 0 ? matchingWords[0] : null;
+    }
+
+    function handleSearchInput() {
+        const searchInput = document.getElementById("searchInput");
+        const searchTerm = searchInput.value.trim();
+        const guessedWord = spellCheckAsYouType(searchTerm);
+
+        const finalSearchTerm = guessedWord || searchTerm;
+
+        document.getElementById("guessedWord").textContent = guessedWord ? `If you meant ${guessedWord} press the search button` : "";
+
+        if (event.key === 'Enter') {
+            searchItems(finalSearchTerm);
+        }
+    }
+
+    function searchItems() {
+        const searchTerm = document.getElementById("searchInput").value;
+        const products = [{
+                name: "Watercolor Flower",
+                price: 999,
+                image: "./Watercolor Flower.webp"
+            }, {
+                name: "Watercolor Floral Pattern",
+                price: 999,
+                image: "./watercolor floral.webp"
+            }, {
+                name: "Tropical Flower",
+                price: 999,
+                image: "./tropical flower.webp"
+            }, {
+                name: "Tropical Flower",
+                price: 999,
+                image: "./tropical flower.2webp.webp"
+
+            }, {
+                name: "Smiley pattern",
+                price: 999,
+                image: "./smiley pattern.webp"
+            }, {
+                name: "Rolling Joints",
+                price: 999,
+                image: "./rolling joints.webp"
+            }, {
+                name: "Rainforest Zoo",
+                price: 999,
+                image: "./rainforest zoo.webp"
+            }, {
+                name: "Purple Floral",
+                price: 999,
+                image: "./purple floral.webp "
+            }, {
+                name: "Multicolor tie die",
+                price: 999,
+                image: "./multicolor tie die.webp"
+            }, {
+                name: "Love Sucks",
+                price: 999,
+                image: "./love sucks.webp"
+            }, {
+                name: "Love Blossom",
+                price: 999,
+                image: "./love blossom.webp "
+            }, {
+                name: "HoloGraphic heart ",
+                price: 999,
+                image: "./holographic heart.webp"
+            },{
+                name:"Floral Blossom with holder" ,
+                price:399,
+                image:"./floral blossom with holder.webp"
+            },{
+                name:"Bright Flower",
+                price:"399",
+                image:"./bright flower.webp"
+            },{
+                name:"Wild Flower",
+                price:"399",
+                image:"./wildlower designer.webp"
+            },{
+                name:"Floral family",
+                price:"399",
+                image:"./floral fmaily.webp"
+            },{
+                name:"Bright Floral",
+                price:"399",
+                image:"./bright floral.webp"
+            },{
+                name:"Sunflower",
+                price:"399",
+                image:"./sunflower.webp"
+            },{
+                name:"Spring Blossom",
+                price:"399",
+                image:"./spring blossom.webp"
+            },{
+                name:"Shades of pink",
+                price:"399",
+                image:"./Shades of Pink.webp"
+            },{
+                name:"Pink and Peach",
+                price:"399",
+                image:"./pink and a peach.webp"
+            },{
+                name:"Floral illustration",
+                price:"399",
+                image:"./floral illustration.webp"
+            },{
+                name:"Floral slim",
+                price:"399",
+                image:"./designer floral slim case.webp"
+            },{
+                name:"Baby Flower",
+                price:"399",
+                image:"./baby flower.webp"
+            },{
+                name:"Growth looks Good on You",
+                price:"399",
+                image:"./growth looks goon on you.webp"
+            },{
+                name:"Do whatever You want!",
+                price:"399",
+                image:"./do whatever you want.webp"
+            }
+            ,{
+                name:"Bright Floral Designer ",
+                price:"399",
+                image:"./bright floral designer.webp"
+            }
+            ,{
+                name:"Good Vibes",
+                price:"399",
+                image:"./Good Vibes Designer.webp"
+            }
+            ,{
+                name:"Fruit Pinch Designer",
+                price:"399",
+                image:"./Fruit.webp"
+            }
+            ,{
+                name:"Puffy Love !Designer Impact ",
+                price:"399",
+                image:"./puffy love.webp"
+            }
+            ,{
+                name:"Peeping Dog",
+                price:"399",
+                image:"./peeping dog.webp"
+            }
+            ,{
+                name:"Realistic Water Color",
+                price:"399",
+                image:"./realisitic watercolor.webp"
+            }
+            ,{
+                name:"I'm Okay , Cute Dog Designer",
+                price:"399",
+                image:"./im okat.webp"
+            }
+            ,{
+                name:"Hello! There Designer Chatbox",
+                price:"399",
+                image:"./Hello! there.webp "
+            }
+            ,{
+                name:"Doodle It Out Designer Mirror",
+                price:"399",
+                image:"./Doodle it out.webp "
+            }
+            ,{
+                name:"Cute Puppy Taking Selfie Mirror Case",
+                price:"399",
+                image:"./cute puppy.webp"
+            },{
+                name:"Rolling Joints Designer Glass Case",
+                price:"399",
+                image:"./Glass cases.webp"
+            },{
+                name:"Still Growing ",
+                price:"399",
+                image:"./Still Growing.webp"
+            },{
+                name:"Karma is a Bitch",
+                price:"399",
+                image:"./karma is a a  bitch.webp"
+            },{
+                name:"Hardwork doodle",
+                price:"399",
+                image:"./hard work doodle.webp"
+            },{
+                name:"Floral doodle design Designer",
+                price:"399",
+                image:"./floral designs.webp"
+            },{
+                name:"Cute Dog With a Ballon ",
+                price:"399",
+                image:"./cute dog.webp"
+            },{
+                name:"Cute Cat Designer Glass Case",
+                price:"399",
+                image:"./Cute Designer cat.webp"
+            },{
+                name:"Cute Corgi Design Glass Case ",
+                price:"399",
+                image:"./cute corgi.webp"
+            },{
+                name:"Nothing Changes Aesthetic Glass",
+                price:"399",
+                image:"./nothing chnages.webp"
+            },{
+                name:"Good Things are Coming Glass Case",
+                price:"399",
+                image:"./Good things.webp"
+            },{
+                name:"Focus On Good Glass",
+                price:"399",
+                image:"./Focus on good.webp"
+            },{
+                name:"Rainbow Smily Glass Case For Iphone",
+                price:"399",
+                image:"./Rainbow smily.webp"
+            },{
+                name:"Gemma-Star Chain Bracelet",
+                price:"799",
+                image:"./gemma.webp"
+            },{
+                name:"Lala-layered chain",
+                price:"899",
+                image:"./lala.webp"
+            },{
+                name:"Rebeca-Star Charm Chain Bracelet",
+                price:"SOLD OUT",
+                image:"./rebeca.webp"
+            },{
+                name:"Leelie-Star Pendant Necklace",
+                price:"SOLD OUT",
+                image:"./leelie.webp"
+            },{
+                name:"Brielle - Sterling silver pendant necklace",
+                price:"599",
+                image:"./brielle.webp"
+            },{
+                name:"Love - Sterling silver pendant necklace",
+                price:"799",
+                image:"./love.webp"
+            },{
+                name:"Courtney-Sterling silver pendant necklace",
+                price:"799",
+                image:"./courtney.webp"
+            },{
+                name:"Octavia-FLower pendant necklace",
+                price:"1299",
+                image:"./octavia.webp"
+            }
+
+
+        ];
+
+        const searchResults = products.filter(product =>
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        const searchResultsContainer = document.getElementById("searchResults");
+        searchResultsContainer.innerHTML = "";
+
+        searchResults.forEach(product => {
+            const productElement = document.createElement("div");
+            productElement.classList.add("product");
+            productElement.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>Price: ₹${product.price}</p>
+                        <button onclick="addToCart('${product.name}', ${product.price}, '${product.image}')"><img src="./add to cart.png" style="width:30px; height:30px;"></button>
+                    `;
+            searchResultsContainer.appendChild(productElement);
+        });
+    }
+
+    function checkout() {
+        console.log('Checkout:', cart);
+
+        // Save the cart to local storage before clearing it
+        saveCartToLocalStorage();
+
+        cart = [];
+        updateCartDisplay();
+    }
+</script>
+
+</html>

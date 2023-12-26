@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        
+        header {
+            background-color: #000000;
+            padding: 15px;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        
+        .product img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 10px;
+        }
+        
+        .product-details {
+            flex-grow: 1;
+        }
+        
+        .total {
+            text-align: right;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cart Summary</h1>
+    </header>
+
+    <div class="container" id="cartSummaryContainer">
+    </div>
+    <div class="container" style="text-align: center; margin-top: 20px;">
+        <button onclick="redirectToPayment()" style="font-size: 1.2em; padding: 10px; background-color: #4caf50; color: #fff; border: none; cursor: pointer;">Proceed to Payment</button>
+    </div>
+
+
+    <script>
+        var cart = JSON.parse(localStorage.getItem("cart"));
+
+        if (cart && cart.length > 0) {
+            var cartSummaryContainer = document.getElementById('cartSummaryContainer');
+
+            cart.forEach(function(item) {
+                var productDiv = document.createElement('div');
+                productDiv.className = 'product';
+
+                var img = document.createElement('img');
+                img.src = item.image;
+                img.alt = item.name;
+
+                var productDetailsDiv = document.createElement('div');
+                productDetailsDiv.className = 'product-details';
+                productDetailsDiv.innerHTML = `
+                    <p><strong>${item.name}</strong></p>
+                    <p>Price: Rs. ${item.price.toFixed(2)}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                `;
+
+                productDiv.appendChild(img);
+                productDiv.appendChild(productDetailsDiv);
+
+                cartSummaryContainer.appendChild(productDiv);
+            });
+
+            var totalDiv = document.createElement('div');
+            totalDiv.className = 'total';
+            totalDiv.textContent = 'Total: Rs. ' + calculateTotal(cart).toFixed(2);
+
+            cartSummaryContainer.appendChild(totalDiv);
+        } else {
+            var cartSummaryContainer = document.getElementById('cartSummaryContainer');
+            cartSummaryContainer.innerHTML = '<p style="text-align: center; font-size: 1.2em;">Your cart is empty.</p>';
+        }
+
+        function calculateTotal(cart) {
+            return cart.reduce(function(total, item) {
+                return total + item.price * item.quantity;
+            }, 0);
+        }
+
+        // function redirectToPayment() {
+        //     window.location.href = 'payment.html';
+        // }
+
+        function redirectToPayment() {
+
+            var loggedInUser = sessionStorage.getItem('user');
+
+            if (loggedInUser) {
+                window.location.href = 'payment.html';
+            } else {
+                alert("Please sign in to proceed to payment.");
+                window.location.href = './sign in.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

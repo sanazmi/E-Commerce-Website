@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css.css" />
+    <title>E-commerce-website</title>
+</head>
+
+<body onload="updateCartDisplay()">
+    <div class="header">
+        <div class="hamburger_logo">
+            <img src="./hamburger.png" alt="" />
+        </div>
+        <div class="logo">
+            <a class="logo_link" href="./index.html"><span>Case.Com</span></a
+        >
+      </div>
+      <div class="icons">
+        <div class="upper_header_right_icons_button">
+          <a
+            href="./sign in.html"
+            class="navlink"
+            title="Account"
+          >
+            <img src="./account.png" alt="" />
+          </a>
+        </div>
+        <div class="upper_header_right_icons_button">
+            <a href="search.html" class="navlink" title="Search">
+                <img src="./seacrh.png" alt="" />
+            </a>
+        </div>
+        <div class="upper_header_right_icons_button">
+            <img src="./cart.png" onclick="opencart()" style="width: 30px; height: 30px" />
+        </div>
+    </div>
+    </div>
+    <div class="navbar">
+        <div class="navbar_container">
+            <div class="nv3">
+                <a href="./floral blossom with holder more products.html"><span>Floral Cases</span></a
+            >
+          </div>
+            <div class="nv1">
+                <a href="./water bottle more products.html"><span>Water Bottles</span></a
+          >
+        </div>
+        <div class="nv2">
+          <a
+            href="./glass case more products.html"
+            ><span>Glass Cases</span></a
+          >
+        </div>
+        
+        <div class="nv4">
+          <a href=""><span>Iphone Zone</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Iphone Cases</a>
+                    <a href="#">iWatch Bands</a>
+                    <a href="#">Airpods Cases</a>
+                </div>
+            </div>
+            <div class="nv5">
+                <a href="./customisable iphone more products.html"><span>Customised Iphone Cases</span></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="marque">
+      <div class="leftend" style="width: 10%">
+        <img src="./new year.png" />
+      </div>
+      <div class="middle" style="width: 80%">
+        <marquee direction="left " behaviour="scroll ">
+          <p>Happy New Year!!</p>
+        </marquee>
+      </div>
+      <div class="rightned" style="width: 10%">
+        <img src="./newstars.png" alt="" />
+      </div>
+    </div>
+
+    <div class="banner">
+      <div class="slide">
+        <img
+          src="./banner1.webp"
+          alt="Glass Case 1"
+        />
+        <h1>Glass Cases 1</h1>
+        <!-- <a href="# ">
+                <button class="btn ">View Products</button>
+            </a> -->
+            </div>
+            <div class="slide">
+                <img src="./banner2.webp" alt="Glass Case 2" />
+                <h1>Glass Cases 2</h1>
+                <a href="# ">
+                    <!-- <button class="btn">View Products</button> -->
+                </a>
+            </div>
+
+            <!-- 
+        <div class="prev " onclick="changeSlide(-1) ">&#10094;</div>
+        <div class="next " onclick="changeSlide(1) ">&#10095;</div> -->
+        </div>
+
+        <div class="menu_upper">
+            <div class="menu1">
+                <p>Click Me , I'll Take you to Our best seller 😋</p>
+                <button class="btn" onclick="redirectToMoreDesigns()">👀</button>
+            </div>
+        </div>
+
+        <div class="product-grid1">
+            <div class="product">
+                <img src="./floral blossom with holder.webp " alt="Product 2 " />
+                <h3>Cases</h3>
+                <p>Floral Blossom Designer Slim Case with Holder for Iphone</p>
+                <span>₹399.0</span>
+                <a href="floral blossom with holder more products.html"><button>View more products</button></a
+            >
+          </div>
+            <div class="product">
+                <img src="./Watercolor Flower.webp" alt="Product 1 " />
+                <h3>Water Bottle</h3>
+                <p>
+                    Stainless Steel Designer Water Bottle with Metal Straw(Watercolor Flower)
+                </p>
+                <span>₹999.0</span>
+                <a href="./water bottle more products.html"><button>View more products</button></a
+        >
+      </div>
+
+      
+
+      <div class="product">
+        <img src="./customised.webp " alt="Product 2 " />
+        <h3>Customisable Cases</h3>
+        <p>A Customisable option for Iphone lovers</p>
+        <span>₹399.0</span>
+        <a
+          href="./customisable iphone more products.html"
+          ><button>View more products</button></a
+        >
+      </div>
+      <div class="product">
+        <img src="./Glass cases.webp " alt="Product 2 " />
+        <h3>Glass Cases</h3>
+        <p>Glass Cases for that classy finish :)</p>
+        <span>₹399.0</span>
+        <a
+          href="./glass case more products.html"
+          ><button>View more products</button></a
+        >
+      </div>
+    </div>
+
+    <div class="menu_under">
+      <div class="menu2">
+        <p>Mure by Casetos</p>
+        <a href="./mure.html"
+          ><button class="btn">More Designs</button></a
+        >
+      </div>
+    </div>
+    <div class="product-grid2">
+      <div class="product">
+        <img src="./gemma.webp " alt="Product 1 " />
+        <h3></h3>
+        <p>Gemma-Star Chain Bracelet</p>
+        <span>₹999.0</span>
+        <a href="./mure.html"
+          ><button>View more products</button></a
+        >
+      </div>
+
+      <div class="product">
+        <img src="./lala.webp " alt="Product 2 " />
+        <h3></h3>
+        <p>Lala-layered chain</p>
+        <span>₹699.0</span>
+        <a href="./mure.html"
+          ><button>View more products</button></a
+        >
+      </div>
+
+      <div class="product">
+        <img src="./rebeca.webp " alt="Product 2 " />
+        <h3></h3>
+        <p>"Rebecca "-Star Charm chain</p>
+        <span>sold out</span>
+        <!-- <button>Add to Cart</button>
+            <button>View more products</button> -->
+      </div>
+      <div class="product">
+        <img src="./leelie.webp " alt="Product 2 " />
+        <h3></h3>
+        <p>"Leelie "-Star Pendant Necklace</p>
+        <span>sold out</span>
+        <!-- <button>Add to Cart</button>
+            <button>View more products</button> -->
+      </div>
+    </div>
+
+    <div class="menu_under_banner">
+      <div class="menu31">
+        <p>Customer Reviews</p>
+      </div>
+
+      <div class="review-section1">
+        <div class="review1">
+          <div class="user-info1">
+            <img src="./Taylor.jpeg" alt="User Avatar" />
+            <p>Taylor Swift</p>
+            <br />
+            <p>⭐⭐⭐⭐⭐</p>
+          </div>
+          <p class="review-text1">
+            The cases were Quite sturdy and Durable unlike my Exes!
+          </p>
+        </div>
+
+        <div class="review1">
+          <div class="user-info1">
+            <img src="./brahmsss.jpeg" alt="User Avatar" />
+            <p>brahms eraa</p>
+            <br />
+            <p>⭐⭐⭐⭐</p>
+          </div>
+          <p class="review-text1">Chalaaaa baunnai , sallaga undandi</p>
+        </div>
+
+        <div class="review1">
+          <div class="user-info1">
+            <img src="./venkss.jpeg" alt="User Avatar" />
+            <p>venkyyss</p>
+            <br />
+            <p>⭐⭐⭐⭐⭐</p>
+          </div>
+          <p class="review-text1">Thurummm , best casess</p>
+        </div>
+
+        <div class="review1">
+          <div class="user-info1">
+            <img src="./salluu.jpeg" alt="User Avatar" />
+            <p>Sallu here</p>
+            <br />
+            <p>⭐⭐⭐⭐⭐</p>
+          </div>
+          <p class="review-text1">bhai ka jalwa hai ye site par</p>
+        </div>
+        <div class="review1">
+          <div class="user-info1">
+            <img src="./red shirt.jpeg" alt="User Avatar" />
+            <p>user1011</p>
+            <br />
+            <p>⭐⭐⭐⭐</p>
+          </div>
+          <p class="review-text1">Boht achey cases , lelo jaldi</p>
+        </div>
+        <div class="review1">
+          <div class="user-info1">
+            <img src="./rukho zara.jpeg" alt="User Avatar" />
+            <p>Hindustani Bhau</p>
+            <br />
+            <p>⭐⭐</p>
+          </div>
+          <p class="review-text1">Ruko zara , sabar karo please 🖐</p>
+        </div>
+
+        <!-- <button class="bton">Write a Review</button> -->
+        <button class="bton" onclick="openPopup()">Write a Review</button>
+      </div>
+    </div>
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+      <form id="reviewForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="rating">Star Rating:</label>
+        <select id="rating" required>
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+
+        <label for="image">Image URL (optional , well u can ignore):</label>
+        <input type="text" id="image" />
+
+        <label for="review">Review:</label>
+        <textarea id="review" required></textarea>
+
+        <button type="button" onclick="submitReview()">Submit Review</button>
+        <button type="button" onclick="closePopup()">Cancel</button>
+      </form>
+    </div>
+
+    <div class="footer_top">
+      <div class="footer1">
+        <span>Reasons to love</span>
+      </div>
+      <div class="footer2">
+        <div class="transactions">
+          <img src="./shield.png " alt=" " />
+          <h>Secure transactions</h>
+          <p>Transactions are held with bank grade security</p>
+        </div>
+        <div class="checkout">
+          <img src="./recycle.png" alt=" " />
+          <h>Simple checkout</h>
+          <p>Our simple checkouts are easy and simple to use</p>
+        </div>
+        <div class="touch">
+          <img src="./touch.png" alt=" " />
+          <h>Get In touch</h>
+          <p>Have a question? get in touch anytime</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="content">
+        <div class="menu3">
+          <h3>Main Menu</h3>
+          <ul>
+            <li>Designer Water Bottles</li>
+            <li>Glass Cases</li>
+            <li>floral Iphone  Zone</li>
+            <li>Customised iPhone Cases</li>
+            <li>MURE By Case.com</li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <h3>Contact</h3>
+          <ul>
+            <li>2022 © Case.com India</li>
+            <li>Made With ❤️ In India</li>
+            <li>Call Us @ 6305559833</li>
+            <li>Email @ mailto:sanazmi.1980@gmail.com</li>
+          </ul>
+        </div>
+
+        <div class="links">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>The Story Behind Case.com</li>
+            <li>Privacy Policy</li>
+            <li>Exchange Policy</li>
+            <li>Shipping Policy</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="affi">
+        <p>© Case.com Indiaa 2023</p>
+        <p>Powered by Shopify</p>
+      
+      </div>
+
+      <div class="rights">
+        <h>All rights to kalakaarindiaa.com,  this was an E-commerce-website I recreated using their website</h>
+      </div>
+    </div>
+
+    <div id="chartnav" class="addcartnav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closecart()"
+        >&times;</a
+      >
+      <div class="add-chart">
+        <h1>Cart</h1>
+        <div id="cartItems"></div>
+        <div class="total">
+          <div id="cartTotalContainer"></div>
+          <!-- <div id=" checkoutButtonContainer "></div> -->
+          <a href="./checkout.html">
+            <div id="checkoutButtonContainer"></div>
+          </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartTotal"></div>
+
+    <div id="totalAllProducts" style="display: none"></div>
+</body>
+<script src="./Javascript.js" defer></script>
+
+</html>
