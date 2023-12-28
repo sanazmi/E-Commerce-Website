@@ -1,1005 +1,1010 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 20px;
-    color: #fff;
-    border-bottom: 2px solid #ccc;
-}
-
-.hamburger_logo {
-    display: flex;
-    align-items: center;
-    /* width: 80%; */
-}
-
-.hamburger_logo img {
-    width: 30px;
-    height: 30px;
-}
-
-.logo_link {
-    text-decoration: none;
-    color: #0c0a0a;
-    margin-left: 10px;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
-}
-
-.logo span {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.icons {
-    display: flex;
-}
-
-.upper_header_right_icons_button {
-    margin-right: 10px;
-}
-
-.navlink {
-    text-decoration: none;
-    color: #fff;
-}
-
-.navlink img {
-    width: 30px;
-    height: 30px;
-    padding: 2px;
-}
-
-.navbar {
-    background-color: #f9f9f9;
-}
-
-.navbar_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-}
-
-.nv1 {
-    margin: 0 15px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.nv1:hover {
-    border-color: #c1ba78;
-    border-width: 1px;
-}
-
-.nv1 a {
-    color: #131111;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nv1 a span {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.nv1 a:hover {
-    color: #c1ba78;
-}
-
-.nv2 {
-    margin: 0 15px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.nv2:hover {
-    border-color: #c1ba78;
-    border-width: 1px;
-}
-
-.nv2 a {
-    color: #131111;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nv2 a span {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.nv2 a:hover {
-    color: #c1ba78;
-}
-
-.nv3 {
-    margin: 0 15px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.nv3:hover {
-    border-color: #c1ba78;
-    border-width: 1px;
-}
-
-.nv3 a {
-    color: #131111;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nv3 a span {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.nv3 a:hover {
-    color: #c1ba78;
-}
-
-.nv4 {
-    margin: 0 15px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.nv4:hover {
-    border-color: #c1ba78;
-    border-width: 1px;
-}
-
-.nv4 a {
-    color: #131111;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nv4 a span {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.nv4 a:hover {
-    color: #c1ba78;
-}
-
-.nv5 {
-    margin: 0 15px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.nv5:hover {
-    border-color: #c1ba78;
-    border-width: 1px;
-}
-
-.nv5 a {
-    color: #131111;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nv5 a span {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.nv5 a:hover {
-    color: #c1ba78;
-}
-
-
-/* Dropdown styles */
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-top: 2px solid #c1ba78;
-}
-
-.dropdown-content a {
-    color: #000;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: #ffffff;
-    color: #c1ba78;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.nv4:hover .dropdown-content {
-    display: block;
-    border-color: #c1ba78;
-    /* Highlight the border on hover */
-}
-
-.nv4:hover a span {
-    color: #c1ba78;
-}
-
-
-/* undernavbar */
-
-
-/* Style for the main container */
-
-.marque {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #dfb9b9;
-    /* Set your desired background color */
-    padding: 10px;
-}
-
-
-/* Style for the left and right ends with specified widths */
-
-.leftend {
-    width: 10%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.rightned {
-    width: 10%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.leftend img {
-    height: 40px;
-    width: 40px;
-}
-
-.rightned img {
-    height: 40px;
-    width: 40px;
-}
-
-.middle {
-    flex-grow: 1;
-    width: 80%;
-}
-
-marquee {
-    width: 100%;
-    scrollamount: 100;
-}
-
-marquee p {
-    margin: 0;
-    white-space: nowrap;
-    color: #000000;
-}
-
-
-/* banner */
-
-.banner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.slide {
-    display: none;
-    transition: opacity 0.5s ease;
-}
-
-.slide.active-slide {
-    display: block;
-}
-
-.banner img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.banner h1,
-.banner .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #131212;
-    text-align: center;
-}
-
-.banner h1 {
-    font-size: 89px;
-    font-weight: 100;
-}
-
-.banner p {
-    font-size: 30px;
-}
-
-.banner .btn {
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.prev,
-.next {
-    position: absolute;
-    top: 40%;
-    opacity: 0;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-.prev img,
-.next img {
-    width: 25px;
-    height: 25px;
-}
-
-.banner:hover .prev,
-.banner:hover .next {
-    opacity: 1;
-}
-
-.prev {
-    left: 2%;
-}
-
-.next {
-    right: 2%;
-}
-
-.menu_upper {
-    background-color: #ffffff;
-    padding: 10px;
-    text-align: center;
-}
-
-.menu1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.menu1 p {
-    font-size: 24px;
-    color: #131111;
-    margin-bottom: 10px;
-}
-
-.btn {
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #c1ba78;
-    color: #fff;
-}
-
-.product-grid1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* grid-template-columns: repeat(4, 1fr); */
-    gap: 20px;
-    padding: 20px;
-}
-
-.product {
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.product h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.product p {
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.product span {
-    font-weight: bold;
-    color: #333;
-    font-size: 16px;
-}
-
-.product button {
-    background-color: #c1ba78;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.product button:hover {
-    background-color: #999;
-}
-
-.product button:last-child {
-    background-color: #c1ba78;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.product button:last-child:hover {
-    background-color: #999;
-}
-
-
-/* Add this style to your existing CSS */
-
-.menu_under {
-    background-color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-.menu2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.menu2 p {
-    font-size: 24px;
-    font-weight: bold;
-    color: #131111;
-    margin-bottom: 10px;
-}
-
-.btn {
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #c1ba78;
-    color: #fff;
-}
-
-.product-grid2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* grid-template-columns: repeat(4, 1fr); */
-    gap: 20px;
-    padding: 20px;
-}
-
-.product {
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.product h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.product p {
-    color: #c2bcbc;
-    margin-bottom: 10px;
-}
-
-.product span {
-    font-weight: bold;
-    color: #333;
-    font-size: 16px;
-}
-
-.product button {
-    background-color: #c1ba78;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.product button:hover {
-    background-color: #999;
-}
-
-.product button:last-child {
-    background-color: #c1ba78;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.product button:last-child:hover {
-    background-color: #999;
-}
-
-
-/* top footer */
-
-.footer_top {
-    background-color: #eae7e7;
-    color: #fff;
-    padding: 20px;
-}
-
-.footer1 {
-    text-align: center;
-}
-
-.footer1 span {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000
-}
-
-.footer2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.transactions,
-.checkout,
-.touch {
-    text-align: center;
-    flex: 0 0 30%;
-    margin-bottom: 20px;
-}
-
-.transactions img,
-.checkout img,
-.touch img {
-    width: 30px;
-    height: 30px;
-}
-
-.transactions h,
-.checkout h,
-.touch h {
-    font-size: 19px;
-    margin-top: 10px;
-    color: #000;
-}
-
-.transactions p,
-.checkout p,
-.touch p {
-    font-size: 14px;
-    color: #0c0c0c;
-}
-
-
-/*  bottom footer */
-
-.footer {
-    background-color: #ffffff;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.content {
-    display: flex;
-    justify-content: space-around;
-}
-
-.menu3,
-.contact,
-.links {
-    flex: 0 0 30%;
-    text-align: left;
-}
-
-.menu3 h3,
-.contact h3,
-.links h3 {
-    color: #0f0f0e;
-}
-
-.menu3 ul,
-.contact ul,
-.links ul {
-    list-style: none;
-    padding: 0;
-    color: #000
-}
-
-.menu3 li,
-.contact li,
-.links li {
-    margin-bottom: 10px;
-    color: #000
-}
-
-.affi {
-    text-align: center;
-    flex: 0 0 30%;
-}
-
-.affi p {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-.addcartnav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #c0c8b6ad;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.addcartnav a {
-    padding: 15px 20px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #d3cac8;
-    display: block;
-    transition: 0.3s;
-    border-bottom: 2px solid #f4f2f6;
-}
-
-.addcartnav a:hover {
-    color: #000000;
-}
-
-.addcartnav .closebtn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.add-chart {
-    padding: 25px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#chartnav {
-    height: 100%;
-    width: 400px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #e5dda8ad;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 0px;
-}
-
-#chartnav a {
-    padding: 15px 20px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #000;
-    display: block;
-    transition: 0.3s;
-    border-bottom: 2px solid #000;
-}
-
-#chartnav a:hover {
-    color: #fff;
-}
-
-#chartnav .closebtn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: #000;
-    cursor: pointer;
-}
-
-#cartItems {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-#cartItems div {
-    /* display: flex; */
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-#cartItems img {
-    border-radius: 10%;
-}
-
-#cartItems div p {
-    margin: 0;
-}
-
-#cartTotal {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input[type="text"] {
-    width: 150px;
-    padding: 5px;
-    /* margin-left: 10px; */
-}
-
-button {
-    background-color: #ece1e1;
-    border: none;
-    cursor: pointer;
-}
-
-button img {
-    width: 20px;
-    height: 20px;
-    margin-top: 5px;
-}
-
-#checkoutBtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-.btn {
-    background-color: #040404;
-    color: white;
-    padding: 10px 15px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-
-/* review */
-
-
-/* Style for the review section */
-
-.menu_under_banner {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-}
-
-.menu31 {
-    font-size: 24px;
-    color: #333;
-    font-weight: bold;
-}
-
-.review-section1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 15px;
-}
-
-.review1 {
-    border: 1px solid #ddd;
-    padding: 8px;
-    border-radius: 6px;
-}
-
-.user-info1 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.user-info1 img {
-    border-radius: 40%;
-    margin-right: 8px;
-    width: 30px;
-    height: 30px;
-}
-
-.review-text1 {
-    margin: 0;
-    font-size: 14px;
-}
-
-.bton {
-    background-color: #040404;
-    color: white;
-    padding: 8px 12px;
-    margin-top: 8px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-.popup form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.popup label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.popup input,
-.popup select,
-.popup textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-}
-
-.popup button {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.popup button:hover {
-    background-color: #0056b3;
-}
-
-.popup button[type="button"] {
-    margin-right: 10px;
-}
-
-.popup textarea {
-    resize: vertical;
-    height: 100px;
-}
-
-
-/* media queries */
-
-@media only screen and (max-width: 5166px) and (min-width: 1369px) {
-    .product-grid1 {
-        display: grid;
-        /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        padding: 20px;
-    }
-    .product-grid2 {
-        display: grid;
-        /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        padding: 20px;
-    }
-}
-
-.rights {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #555;
-    margin-top: 20px;
-}
-
-.rights h {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-}
+                                    body {
+                                        margin: 0;
+                                        font-family: 'Arial', sans-serif;
+                                    }
+                                    
+                                    .header {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        background-color: #ffffff;
+                                        padding: 20px;
+                                        color: #fff;
+                                        border-bottom: 2px solid #ccc;
+                                    }
+                                    
+                                    .hamburger_logo {
+                                        display: flex;
+                                        align-items: center;
+                                        /* width: 80%; */
+                                    }
+                                    
+                                    .hamburger_logo img {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
+                                    
+                                    .logo_link {
+                                        text-decoration: none;
+                                        color: #0c0a0a;
+                                        margin-left: 10px;
+                                        align-items: center;
+                                        justify-content: center;
+                                        font-style: italic;
+                                    }
+                                    
+                                    .logo span {
+                                        font-size: 24px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .icons {
+                                        display: flex;
+                                    }
+                                    
+                                    .upper_header_right_icons_button {
+                                        margin-right: 10px;
+                                    }
+                                    
+                                    .navlink {
+                                        text-decoration: none;
+                                        color: #fff;
+                                    }
+                                    
+                                    .navlink img {
+                                        width: 30px;
+                                        height: 30px;
+                                        padding: 2px;
+                                    }
+                                    
+                                    .navbar {
+                                        background-color: #f9f9f9;
+                                    }
+                                    
+                                    .navbar_container {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 50px;
+                                    }
+                                    
+                                    .nv1 {
+                                        margin: 0 15px;
+                                        border-bottom: 2px solid transparent;
+                                        transition: border-color 0.3s ease, color 0.3s ease;
+                                    }
+                                    
+                                    .nv1:hover {
+                                        border-color: #c1ba78;
+                                        border-width: 1px;
+                                    }
+                                    
+                                    .nv1 a {
+                                        color: #131111;
+                                        text-decoration: none;
+                                        transition: color 0.3s ease;
+                                    }
+                                    
+                                    .nv1 a span {
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .nv1 a:hover {
+                                        color: #c1ba78;
+                                    }
+                                    
+                                    .nv2 {
+                                        margin: 0 15px;
+                                        border-bottom: 2px solid transparent;
+                                        transition: border-color 0.3s ease, color 0.3s ease;
+                                    }
+                                    
+                                    .nv2:hover {
+                                        border-color: #c1ba78;
+                                        border-width: 1px;
+                                    }
+                                    
+                                    .nv2 a {
+                                        color: #131111;
+                                        text-decoration: none;
+                                        transition: color 0.3s ease;
+                                    }
+                                    
+                                    .nv2 a span {
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .nv2 a:hover {
+                                        color: #c1ba78;
+                                    }
+                                    
+                                    .nv3 {
+                                        margin: 0 15px;
+                                        border-bottom: 2px solid transparent;
+                                        transition: border-color 0.3s ease, color 0.3s ease;
+                                    }
+                                    
+                                    .nv3:hover {
+                                        border-color: #c1ba78;
+                                        border-width: 1px;
+                                    }
+                                    
+                                    .nv3 a {
+                                        color: #131111;
+                                        text-decoration: none;
+                                        transition: color 0.3s ease;
+                                    }
+                                    
+                                    .nv3 a span {
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .nv3 a:hover {
+                                        color: #c1ba78;
+                                    }
+                                    
+                                    .nv4 {
+                                        margin: 0 15px;
+                                        border-bottom: 2px solid transparent;
+                                        transition: border-color 0.3s ease, color 0.3s ease;
+                                    }
+                                    
+                                    .nv4:hover {
+                                        border-color: #c1ba78;
+                                        border-width: 1px;
+                                    }
+                                    
+                                    .nv4 a {
+                                        color: #131111;
+                                        text-decoration: none;
+                                        transition: color 0.3s ease;
+                                    }
+                                    
+                                    .nv4 a span {
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .nv4 a:hover {
+                                        color: #c1ba78;
+                                    }
+                                    
+                                    .nv5 {
+                                        margin: 0 15px;
+                                        border-bottom: 2px solid transparent;
+                                        transition: border-color 0.3s ease, color 0.3s ease;
+                                    }
+                                    
+                                    .nv5:hover {
+                                        border-color: #c1ba78;
+                                        border-width: 1px;
+                                    }
+                                    
+                                    .nv5 a {
+                                        color: #131111;
+                                        text-decoration: none;
+                                        transition: color 0.3s ease;
+                                    }
+                                    
+                                    .nv5 a span {
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .nv5 a:hover {
+                                        color: #c1ba78;
+                                    }
+                                    /* Dropdown styles */
+                                    
+                                    .dropdown {
+                                        position: relative;
+                                        display: inline-block;
+                                    }
+                                    
+                                    .dropdown-content {
+                                        display: none;
+                                        position: absolute;
+                                        background-color: #ffffff;
+                                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                                        z-index: 1;
+                                        border-top: 2px solid #c1ba78;
+                                    }
+                                    
+                                    .dropdown-content a {
+                                        color: #000;
+                                        padding: 12px 16px;
+                                        display: block;
+                                        text-decoration: none;
+                                        transition: background-color 0.3s ease, color 0.3s ease;
+                                    }
+                                    
+                                    .dropdown-content a:hover {
+                                        background-color: #ffffff;
+                                        color: #c1ba78;
+                                    }
+                                    
+                                    .dropdown:hover .dropdown-content {
+                                        display: block;
+                                    }
+                                    
+                                    .nv4:hover .dropdown-content {
+                                        display: block;
+                                        border-color: #c1ba78;
+                                        /* Highlight the border on hover */
+                                    }
+                                    
+                                    .nv4:hover a span {
+                                        color: #c1ba78;
+                                    }
+                                    /* undernavbar */
+                                    /* Style for the main container */
+                                    
+                                    .marque {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        background-color: #dfb9b9;
+                                        /* Set your desired background color */
+                                        padding: 10px;
+                                    }
+                                    /* Style for the left and right ends with specified widths */
+                                    
+                                    .leftend {
+                                        width: 10%;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                    }
+                                    
+                                    .rightned {
+                                        width: 10%;
+                                        display: flex;
+                                        justify-content: flex-end;
+                                    }
+                                    
+                                    .leftend img {
+                                        height: 40px;
+                                        width: 40px;
+                                    }
+                                    
+                                    .rightned img {
+                                        height: 40px;
+                                        width: 40px;
+                                    }
+                                    
+                                    .middle {
+                                        flex-grow: 1;
+                                        width: 80%;
+                                    }
+                                    
+                                    marquee {
+                                        width: 100%;
+                                        scrollamount: 100;
+                                    }
+                                    
+                                    marquee p {
+                                        margin: 0;
+                                        white-space: nowrap;
+                                        color: #000000;
+                                    }
+                                    /* banner */
+                                    
+                                    .banner {
+                                        position: relative;
+                                        width: 100%;
+                                        overflow: hidden;
+                                        max-width: 100%;
+                                    }
+                                    
+                                    .slide {
+                                        display: none;
+                                        transition: opacity 0.5s ease;
+                                    }
+                                    
+                                    .slide.active-slide {
+                                        display: block;
+                                    }
+                                    
+                                    .banner img {
+                                        width: 100%;
+                                        height: 500px;
+                                        object-fit: cover;
+                                    }
+                                    
+                                    .banner h1,
+                                    .banner .btn {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        color: #131212;
+                                        text-align: center;
+                                    }
+                                    
+                                    .banner h1 {
+                                        font-size: 89px;
+                                        font-weight: 100;
+                                    }
+                                    
+                                    .banner p {
+                                        font-size: 30px;
+                                    }
+                                    
+                                    .banner .btn {
+                                        background-color: black;
+                                        color: white;
+                                        font-size: 16px;
+                                        padding: 12px 24px;
+                                        border: none;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                    }
+                                    
+                                    .prev,
+                                    .next {
+                                        position: absolute;
+                                        top: 40%;
+                                        opacity: 0;
+                                        cursor: pointer;
+                                        transition: opacity 0.3s ease;
+                                    }
+                                    
+                                    .prev img,
+                                    .next img {
+                                        width: 25px;
+                                        height: 25px;
+                                    }
+                                    
+                                    .banner:hover .prev,
+                                    .banner:hover .next {
+                                        opacity: 1;
+                                    }
+                                    
+                                    .prev {
+                                        left: 2%;
+                                    }
+                                    
+                                    .next {
+                                        right: 2%;
+                                    }
+                                    
+                                    .menu_upper {
+                                        background-color: #ffffff;
+                                        padding: 10px;
+                                        text-align: center;
+                                    }
+                                    
+                                    .menu1 {
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                    }
+                                    
+                                    .menu1 p {
+                                        font-size: 24px;
+                                        color: #131111;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    .btn {
+                                        background-color: black;
+                                        color: white;
+                                        font-size: 16px;
+                                        padding: 12px 24px;
+                                        border: none;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        transition: background-color 0.3s ease, color 0.3s ease;
+                                    }
+                                    
+                                    .btn:hover {
+                                        background-color: #c1ba78;
+                                        color: #fff;
+                                    }
+                                    
+                                    .product-grid1 {
+                                        display: grid;
+                                        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                                        /* grid-template-columns: repeat(4, 1fr); */
+                                        gap: 20px;
+                                        padding: 20px;
+                                    }
+                                    
+                                    .product {
+                                        border: 1px solid #ddd;
+                                        padding: 20px;
+                                        text-align: center;
+                                        background-color: #fff;
+                                        border-radius: 5px;
+                                    }
+                                    
+                                    .product img {
+                                        max-width: 100%;
+                                        height: auto;
+                                        border-radius: 5px;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    .product h3 {
+                                        font-size: 18px;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    .product p {
+                                        color: #666;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    .product span {
+                                        font-weight: bold;
+                                        color: #333;
+                                        font-size: 16px;
+                                    }
+                                    
+                                    .product button {
+                                        background-color: #c1ba78;
+                                        color: #fff;
+                                        border: none;
+                                        padding: 10px 15px;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        transition: background-color 0.3s ease;
+                                    }
+                                    
+                                    .product button:hover {
+                                        background-color: #999;
+                                    }
+                                    
+                                    .product button:last-child {
+                                        background-color: #c1ba78;
+                                        color: #fff;
+                                        border: none;
+                                        padding: 10px 15px;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        margin-top: 10px;
+                                        transition: background-color 0.3s ease;
+                                    }
+                                    
+                                    .product button:last-child:hover {
+                                        background-color: #999;
+                                    }
+                                    /* Add this style to your existing CSS */
+                                    
+                                    .menu_under {
+                                        background-color: #ffffff;
+                                        padding: 20px;
+                                        text-align: center;
+                                    }
+                                    
+                                    .menu2 {
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                    }
+                                    
+                                    .menu2 p {
+                                        font-size: 24px;
+                                        font-weight: bold;
+                                        color: #131111;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    .btn {
+                                        background-color: black;
+                                        color: white;
+                                        font-size: 16px;
+                                        padding: 12px 24px;
+                                        border: none;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        transition: background-color 0.3s ease, color 0.3s ease;
+                                    }
+                                    
+                                    .btn:hover {
+                                        background-color: #c1ba78;
+                                        color: #fff;
+                                    }
+                                    
+                                    .product-grid2 {
+                                        display: grid;
+                                        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                                        /* grid-template-columns: repeat(4, 1fr); */
+                                        gap: 20px;
+                                        padding: 20px;
+                                    }
+                                    
+                                    .product {
+                                        border: 1px solid #ddd;
+                                        padding: 20px;
+                                        text-align: center;
+                                        background-color: #fff;
+                                        border-radius: 5px;
+                                    }
+                                    
+                                    .product img {
+                                        max-width: 100%;
+                                        height: auto;
+                                        border-radius: 5px;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    .product h3 {
+                                        font-size: 18px;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    .product p {
+                                        color: #c2bcbc;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    .product span {
+                                        font-weight: bold;
+                                        color: #333;
+                                        font-size: 16px;
+                                    }
+                                    
+                                    .product button {
+                                        background-color: #c1ba78;
+                                        color: #fff;
+                                        border: none;
+                                        padding: 10px 15px;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        transition: background-color 0.3s ease;
+                                    }
+                                    
+                                    .product button:hover {
+                                        background-color: #999;
+                                    }
+                                    
+                                    .product button:last-child {
+                                        background-color: #c1ba78;
+                                        color: #fff;
+                                        border: none;
+                                        padding: 10px 15px;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        margin-top: 10px;
+                                        transition: background-color 0.3s ease;
+                                    }
+                                    
+                                    .product button:last-child:hover {
+                                        background-color: #999;
+                                    }
+                                    /* top footer */
+                                    
+                                    .footer_top {
+                                        background-color: #eae7e7;
+                                        color: #fff;
+                                        padding: 20px;
+                                    }
+                                    
+                                    .footer1 {
+                                        text-align: center;
+                                    }
+                                    
+                                    .footer1 span {
+                                        font-size: 24px;
+                                        font-weight: bold;
+                                        color: #000
+                                    }
+                                    
+                                    .footer2 {
+                                        display: flex;
+                                        justify-content: space-around;
+                                        align-items: center;
+                                        flex-wrap: wrap;
+                                        margin-top: 20px;
+                                    }
+                                    
+                                    .transactions,
+                                    .checkout,
+                                    .touch {
+                                        text-align: center;
+                                        flex: 0 0 30%;
+                                        margin-bottom: 20px;
+                                    }
+                                    
+                                    .transactions img,
+                                    .checkout img,
+                                    .touch img {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
+                                    
+                                    .transactions h,
+                                    .checkout h,
+                                    .touch h {
+                                        font-size: 19px;
+                                        margin-top: 10px;
+                                        color: #000;
+                                    }
+                                    
+                                    .transactions p,
+                                    .checkout p,
+                                    .touch p {
+                                        font-size: 14px;
+                                        color: #0c0c0c;
+                                    }
+                                    /*  bottom footer */
+                                    
+                                    .footer {
+                                        background-color: #ffffff;
+                                        color: #fff;
+                                        padding: 20px 0;
+                                    }
+                                    
+                                    .content {
+                                        display: flex;
+                                        justify-content: space-around;
+                                    }
+                                    
+                                    .menu3,
+                                    .contact,
+                                    .links {
+                                        flex: 0 0 30%;
+                                        text-align: left;
+                                    }
+                                    
+                                    .menu3 h3,
+                                    .contact h3,
+                                    .links h3 {
+                                        color: #0f0f0e;
+                                    }
+                                    
+                                    .menu3 ul,
+                                    .contact ul,
+                                    .links ul {
+                                        list-style: none;
+                                        padding: 0;
+                                        color: #000
+                                    }
+                                    
+                                    .menu3 li,
+                                    .contact li,
+                                    .links li {
+                                        margin-bottom: 10px;
+                                        color: #000
+                                    }
+                                    
+                                    .affi {
+                                        text-align: center;
+                                        flex: 0 0 30%;
+                                    }
+                                    
+                                    .affi p {
+                                        font-size: 14px;
+                                        margin-bottom: 10px;
+                                        color: #000;
+                                    }
+                                    
+                                    .addcartnav {
+                                        height: 100%;
+                                        width: 0;
+                                        position: fixed;
+                                        z-index: 1;
+                                        top: 0;
+                                        right: 0;
+                                        background-color: #c0c8b6ad;
+                                        overflow-x: hidden;
+                                        transition: 0.5s;
+                                        padding-top: 60px;
+                                    }
+                                    
+                                    .addcartnav a {
+                                        padding: 15px 20px;
+                                        text-decoration: none;
+                                        font-size: 20px;
+                                        color: #d3cac8;
+                                        display: block;
+                                        transition: 0.3s;
+                                        border-bottom: 2px solid #f4f2f6;
+                                    }
+                                    
+                                    .addcartnav a:hover {
+                                        color: #000000;
+                                    }
+                                    
+                                    .addcartnav .closebtn {
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 20px;
+                                        font-size: 30px;
+                                        color: #fff;
+                                        cursor: pointer;
+                                    }
+                                    
+                                    .add-chart {
+                                        padding: 25px;
+                                        background-color: #fff;
+                                        border-radius: 15px;
+                                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                    }
+                                    
+                                    #chartnav {
+                                        height: 100%;
+                                        width: 400px;
+                                        position: fixed;
+                                        z-index: 1;
+                                        top: 0;
+                                        right: 0;
+                                        background-color: #e5dda8ad;
+                                        overflow-x: hidden;
+                                        transition: 0.5s;
+                                        padding-top: 0px;
+                                    }
+                                    
+                                    #chartnav a {
+                                        padding: 15px 20px;
+                                        text-decoration: none;
+                                        font-size: 20px;
+                                        color: #000;
+                                        display: block;
+                                        transition: 0.3s;
+                                        border-bottom: 2px solid #000;
+                                    }
+                                    
+                                    #chartnav a:hover {
+                                        color: #fff;
+                                    }
+                                    
+                                    #chartnav .closebtn {
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 20px;
+                                        font-size: 30px;
+                                        color: #000;
+                                        cursor: pointer;
+                                    }
+                                    
+                                    #cartItems {
+                                        max-width: 400px;
+                                        margin: 20px auto;
+                                        padding: 10px;
+                                        border: 1px solid #ddd;
+                                        border-radius: 8px;
+                                    }
+                                    
+                                    #cartItems div {
+                                        /* display: flex; */
+                                        align-items: center;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    #cartItems img {
+                                        border-radius: 10%;
+                                    }
+                                    
+                                    #cartItems div p {
+                                        margin: 0;
+                                    }
+                                    
+                                    #cartTotal {
+                                        margin-top: 10px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    input[type="text"] {
+                                        width: 150px;
+                                        padding: 5px;
+                                        /* margin-left: 10px; */
+                                    }
+                                    
+                                    button {
+                                        background-color: #ece1e1;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                    
+                                    button img {
+                                        width: 20px;
+                                        height: 20px;
+                                        margin-top: 5px;
+                                    }
+                                    
+                                    #checkoutBtn {
+                                        background-color: #4CAF50;
+                                        color: white;
+                                        padding: 10px 20px;
+                                        border: none;
+                                        border-radius: 5px;
+                                        cursor: pointer;
+                                        font-size: 16px;
+                                        margin-top: 20px;
+                                    }
+                                    
+                                    .btn {
+                                        background-color: #040404;
+                                        color: white;
+                                        padding: 10px 15px;
+                                        margin-top: 5px;
+                                        border: none;
+                                        border-radius: 5px;
+                                        cursor: pointer;
+                                        font-size: 14px;
+                                    }
+                                    /* review */
+                                    /* Style for the review section */
+                                    
+                                    .menu_under_banner {
+                                        background-color: #f4f4f4;
+                                        padding: 20px;
+                                        text-align: center;
+                                    }
+                                    
+                                    .menu31 {
+                                        font-size: 24px;
+                                        color: #333;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .review-section1 {
+                                        display: grid;
+                                        grid-template-columns: repeat(2, 1fr);
+                                        gap: 15px;
+                                        padding: 15px;
+                                    }
+                                    
+                                    .review1 {
+                                        border: 1px solid #ddd;
+                                        padding: 8px;
+                                        border-radius: 6px;
+                                    }
+                                    
+                                    .user-info1 {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: 8px;
+                                    }
+                                    
+                                    .user-info1 img {
+                                        border-radius: 40%;
+                                        margin-right: 8px;
+                                        width: 30px;
+                                        height: 30px;
+                                    }
+                                    
+                                    .review-text1 {
+                                        margin: 0;
+                                        font-size: 14px;
+                                    }
+                                    
+                                    .bton {
+                                        background-color: #040404;
+                                        color: white;
+                                        padding: 8px 12px;
+                                        margin-top: 8px;
+                                        border: none;
+                                        border-radius: 4px;
+                                        cursor: pointer;
+                                        font-size: 12px;
+                                    }
+                                    
+                                    .overlay {
+                                        display: none;
+                                        position: fixed;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: rgba(0, 0, 0, 0.5);
+                                        z-index: 999;
+                                    }
+                                    
+                                    .popup {
+                                        display: none;
+                                        position: fixed;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        padding: 20px;
+                                        background: #fff;
+                                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                                        z-index: 1000;
+                                    }
+                                    
+                                    .popup form {
+                                        max-width: 400px;
+                                        margin: 0 auto;
+                                    }
+                                    
+                                    .popup label {
+                                        display: block;
+                                        margin-bottom: 5px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .popup input,
+                                    .popup select,
+                                    .popup textarea {
+                                        width: 100%;
+                                        padding: 8px;
+                                        margin-bottom: 15px;
+                                        box-sizing: border-box;
+                                    }
+                                    
+                                    .popup button {
+                                        display: inline-block;
+                                        padding: 8px 16px;
+                                        background-color: #007bff;
+                                        color: #fff;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                    
+                                    .popup button:hover {
+                                        background-color: #0056b3;
+                                    }
+                                    
+                                    .popup button[type="button"] {
+                                        margin-right: 10px;
+                                    }
+                                    
+                                    .popup textarea {
+                                        resize: vertical;
+                                        height: 100px;
+                                    }
+                                    /* media queries */
+                                    
+                                    @media only screen and (max-width: 5166px) and (min-width: 1369px) {
+                                        .product-grid1 {
+                                            display: grid;
+                                            /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+                                            grid-template-columns: repeat(4, 1fr);
+                                            gap: 20px;
+                                            padding: 20px;
+                                        }
+                                        .product-grid2 {
+                                            display: grid;
+                                            /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+                                            grid-template-columns: repeat(4, 1fr);
+                                            gap: 20px;
+                                            padding: 20px;
+                                        }
+                                    }
+                                    
+                                    @media only screen and (max-width: 585px) and (min-width: 255px) {
+                                        #chartnav {
+                                            height: 100%;
+                                            width: 320px;
+                                            position: fixed;
+                                            z-index: 1;
+                                        }
+                                    }
+                                    
+                                    @media only screen and (max-width: 559px) and (min-width: 255px) {
+                                        #chartnav {
+                                            height: 100%;
+                                            width: 270px;
+                                            position: fixed;
+                                            z-index: 1;
+                                        }
+                                    }
+                                    
+                                    @media only screen and (max-width: 487px) and (min-width: 255px) {
+                                        .review-section1 {
+                                            display: grid;
+                                            grid-template-columns: 1fr;
+                                            gap: 15px;
+                                            padding: 15px;
+                                        }
+                                    }
+                                    
+                                    .rights {
+                                        background-color: #f2f2f2;
+                                        padding: 20px;
+                                        text-align: center;
+                                        font-size: 14px;
+                                        color: #555;
+                                        margin-top: 20px;
+                                    }
+                                    
+                                    .rights h {
+                                        margin: 0;
+                                        font-size: 16px;
+                                        color: #333;
+                                    }
