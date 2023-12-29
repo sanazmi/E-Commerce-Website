@@ -127,6 +127,10 @@ function addToCart(productName, price, imageUrl) {
     updateCartDisplay();
     updateAddToCartButtonText();
     saveCartToLocalStorage();
+    // tochangeadded tocart
+    var addToCartButton = document.getElementById('addToCartButton');
+    addToCartButton.textContent = 'Added to Cart';
+
 }
 
 function updateAddToCartButtonText() {

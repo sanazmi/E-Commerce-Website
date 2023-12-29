@@ -125,12 +125,27 @@ function addToCart(productName, price, imageUrl) {
         var item = { name: productName, price: parseFloat(price), quantity: 1, gift: false, letter: '', image: imageUrl };
         cart.push(item);
         console.log(cart)
+
     }
 
     updateCartDisplay();
     updateAddToCartButtonText();
     saveCartToLocalStorage();
+    console.log("func")
+    showAddedToCartNotification();
+
 }
+
+function showAddedToCartNotification() {
+    var addedToCartPopup = document.getElementById('addedToCartPopup');
+    console.log(addedToCartPopup)
+    addedToCartPopup.style.display = 'block';
+
+    setTimeout(function() {
+        addedToCartPopup.style.display = 'none';
+    }, 1000);
+}
+
 
 function updateAddToCartButtonText() {
     var addToCartButton = document.getElementById('addToCartButton');
@@ -139,14 +154,13 @@ function updateAddToCartButtonText() {
         var totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
         addToCartButton.innerHTML = `
-            <button style="width:50px;height:50px;background-color:white" onclick="decreaseQuantityInCart()">-</button>
-            <span>${totalQuantity}</span>
-            <button style="width:5px;height:5px;background-color:white" onclick="increaseQuantityInCart()">+</button>
+            <span> Added - ${totalQuantity}</span>
         `;
     } else {
         addToCartButton.textContent = 'Add to Cart';
     }
 }
+
 
 function updateCartDisplay() {
     var cartItems = document.getElementById('cartItems');
@@ -201,7 +215,8 @@ function updateCartDisplay() {
         saveCartToLocalStorage(); 
     }
     var totalAllProducts = document.getElementById('cartTotal');
-    totalAllProducts.innerHTML = `Total: Rs. ${total.toFixed(2)}`;
+    if(totalAllProducts !== null){totalAllProducts.innerHTML = `Total: Rs. ${total.toFixed(2)}`;}
+    
 }
 
 
@@ -244,6 +259,9 @@ document.querySelector('.add-chart').appendChild(cartTotalContainer);
 var checkoutButtonContainer = document.createElement('div');
 checkoutButtonContainer.id = 'checkoutButtonContainer';
 document.querySelector('.add-chart').appendChild(checkoutButtonContainer);
+
+showAddedToCartNotification();
+
 
 // updateCartDisplay();
 
@@ -320,4 +338,4 @@ function searchProducts() {
     // Redirect to the search page with search results
     localStorage.setItem("searchResults", JSON.stringify(searchResults));
     window.location.href = "search.html";
-}
+}   window.location.href = "search.html";

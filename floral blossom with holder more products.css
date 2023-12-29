@@ -687,6 +687,38 @@ input[type=range] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+/* here this */
+
+#addedToCartPopup {
+    position: fixed;
+    top: 1%;
+    right: 0;
+    background-color: #000000;
+    /* Green color */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    /* Increased shadow */
+    z-index: 1000;
+    /* display: none; */
+    /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+    /* Fade in/out effect */
+}
+
+#addedToCartPopup.show {
+    opacity: 1;
+    /* Show the popup */
+}
+
+#addedToCartPopup.hide {
+    opacity: 0;
+    /* Hide the popup */
+}
+
 #chartnav {
     height: 100%;
     width: 0;
