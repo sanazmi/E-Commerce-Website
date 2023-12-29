@@ -150,15 +150,15 @@ function showAddedToCartNotification() {
 function updateAddToCartButtonText() {
     var addToCartButton = document.getElementById('addToCartButton');
 
-    if (cart.length > 0) {
-        var totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+    // if (cart.length > 0) {
+    //     var totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
-        addToCartButton.innerHTML = `
-            <span> Added - ${totalQuantity}</span>
-        `;
-    } else {
-        addToCartButton.textContent = 'Add to Cart';
-    }
+    //     addToCartButton.innerHTML = `
+    //         <span> Added - ${totalQuantity}</span>
+    //     `;
+    // } else {
+    //     addToCartButton.textContent = 'Add to Cart';
+    // }
 }
 
 
@@ -201,7 +201,8 @@ function updateCartDisplay() {
         });
 
         var cartTotal = document.createElement('div');
-        cartTotal.innerHTML = `Total: Rs. ${total.toFixed(2)}`;
+        if(cartTotal !== null){cartTotal.innerHTML = `Total: Rs. ${total.toFixed(2)}`;}
+        
         cartTotalContainer.innerHTML = '';
         cartTotalContainer.appendChild(cartTotal);
 
@@ -338,4 +339,4 @@ function searchProducts() {
     // Redirect to the search page with search results
     localStorage.setItem("searchResults", JSON.stringify(searchResults));
     window.location.href = "search.html";
-}   window.location.href = "search.html";
+}
