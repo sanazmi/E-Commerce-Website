@@ -125,42 +125,28 @@ function addToCart(productName, price, imageUrl) {
         var item = { name: productName, price: parseFloat(price), quantity: 1, gift: false, letter: '', image: imageUrl };
         cart.push(item);
         console.log(cart)
-
     }
 
     updateCartDisplay();
     updateAddToCartButtonText();
     saveCartToLocalStorage();
-    console.log("func")
-    showAddedToCartNotification();
-
 }
 
-function showAddedToCartNotification() {
-    var addedToCartPopup = document.getElementById('addedToCartPopup');
-    console.log(addedToCartPopup)
-    addedToCartPopup.style.display = 'block';
+function updateAddToCartButtonText() {
+    var addToCartButton = document.getElementById('addToCartButton');
 
-    setTimeout(function() {
-        addedToCartPopup.style.display = 'none';
-    }, 1000);
+    if (cart.length > 0) {
+        var totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+
+        addToCartButton.innerHTML = `
+            <button style="width:50px;height:50px;background-color:white" onclick="decreaseQuantityInCart()">-</button>
+            <span>${totalQuantity}</span>
+            <button style="width:5px;height:5px;background-color:white" onclick="increaseQuantityInCart()">+</button>
+        `;
+    } else {
+        addToCartButton.textContent = 'Add to Cart';
+    }
 }
-
-
-// function updateAddToCartButtonText() {
-//     var addToCartButton = document.getElementById('addToCartButton');
-
-//     if (cart.length > 0) {
-//         var totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-
-//         addToCartButton.innerHTML = `
-//             <span> Added - ${totalQuantity}</span>
-//         `;
-//     } else {
-//         addToCartButton.textContent = 'Add to Cart';
-//     }
-// }
-
 
 function updateCartDisplay() {
     var cartItems = document.getElementById('cartItems');
@@ -201,7 +187,6 @@ function updateCartDisplay() {
         });
 
         var cartTotal = document.createElement('div');
-        // if(cartTotal !== null){cartTotal.innerHTML = `Total: Rs. ${total.toFixed(2)}`;}
         cartTotal.innerHTML = `Total: Rs. ${total.toFixed(2)}`;
         cartTotalContainer.innerHTML = '';
         cartTotalContainer.appendChild(cartTotal);
@@ -216,8 +201,7 @@ function updateCartDisplay() {
         saveCartToLocalStorage(); 
     }
     var totalAllProducts = document.getElementById('cartTotal');
-    if(totalAllProducts !== null){totalAllProducts.innerHTML = `Total: Rs. ${total.toFixed(2)}`;}
-    
+    totalAllProducts.innerHTML = `Total: Rs. ${total.toFixed(2)}`;
 }
 
 
@@ -260,9 +244,6 @@ document.querySelector('.add-chart').appendChild(cartTotalContainer);
 var checkoutButtonContainer = document.createElement('div');
 checkoutButtonContainer.id = 'checkoutButtonContainer';
 document.querySelector('.add-chart').appendChild(checkoutButtonContainer);
-
-showAddedToCartNotification();
-
 
 // updateCartDisplay();
 
