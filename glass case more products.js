@@ -147,19 +147,19 @@ function showAddedToCartNotification() {
 }
 
 
-function updateAddToCartButtonText() {
-    var addToCartButton = document.getElementById('addToCartButton');
+// function updateAddToCartButtonText() {
+//     var addToCartButton = document.getElementById('addToCartButton');
 
-    if (cart.length > 0) {
-        var totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+//     if (cart.length > 0) {
+//         var totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
-        addToCartButton.innerHTML = `
-            <span> Added - ${totalQuantity}</span>
-        `;
-    } else {
-        addToCartButton.textContent = 'Add to Cart';
-    }
-}
+//         addToCartButton.innerHTML = `
+//             <span> Added - ${totalQuantity}</span>
+//         `;
+//     } else {
+//         addToCartButton.textContent = 'Add to Cart';
+//     }
+// }
 
 
 function updateCartDisplay() {
